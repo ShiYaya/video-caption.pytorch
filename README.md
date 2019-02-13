@@ -2,6 +2,16 @@
 
 recommend installing pytorch and python packages using Anaconda
 
+
+## by yaya
+
+- in S2VTModel.py 中，应将如下两行注释掉，否则会出现错误(RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation)
+```
+self.rnn1.flatten_parameters()
+self.rnn2.flatten_parameters()
+```
+                
+
 ## requirements
 
 - cuda
